@@ -1,7 +1,5 @@
 const commando = require('discord.js-commando');
 const bot = new commando.Client();
-const TOKEN = 'NDc0MzUzOTU4OTQ1NTU0NDUz.DkPSOQ.X4UQpVrAztAAlh5N68B9Qze33v8'
-
 
 
 bot.on('message', function(message){    
@@ -45,4 +43,4 @@ bot.on('ready',function(){
     console.log("Ready");
 })
 
-bot.login(TOKEN);
+bot.login(process.env.token);
