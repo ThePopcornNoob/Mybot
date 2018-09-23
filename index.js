@@ -55,7 +55,7 @@ bot.on('message', function(message){
         let memberRole = message.member.guild.roles.find("name", "Support");
         message.member.addRole(memberRole);
     }
-
+});
 
 bot.on('ready',function(){
     console.log("Ready");
