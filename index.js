@@ -57,6 +57,26 @@ bot.on('message', function(message){
     }
 });
 
+bot.on('message', function(message){    
+    if(message.content == '^^join Tank')
+    {
+        message.channel.send('Added ' + message.author + ' to Tank role');
+        let memberRole = message.member.guild.roles.find("name", "Tank");
+        message.member.addRole(memberRole);
+    }
+});
+
+bot.on('message', function(message){    
+    if(message.content == '^^join tank')
+    {
+        message.channel.send('Added ' + message.author + ' to Tank role');
+        let memberRole = message.member.guild.roles.find("name", "Tank");
+        message.member.addRole(memberRole);
+    }
+});
+
+
+
 bot.on('ready',function(){
     console.log("Ready");
 })
